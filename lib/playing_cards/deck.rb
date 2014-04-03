@@ -2,9 +2,6 @@ require 'playing_cards/card'
 
 module PlayingCards
   class Deck
-    SUITS = %w(hearts clubs spades diamonds)
-    RANKS = %w(ace two three four five six seven
-               eight nine ten jack queen king)
 
     attr_reader :cards
 
@@ -15,11 +12,11 @@ module PlayingCards
   private
 
     def build_deck
-      all_ranks.flat_map {|rank| SUITS.flat_map {|suit| Card.new(rank,suit) } }
-    end
+      ranks = %w(ace two three four five six seven eight nine ten jack queen king)
 
-    def all_ranks
-      RANKS.map.with_index {|rank, value| Rank.new(rank, value) }
+      all_ranks = ranks.map.with_index {|rank, value| Rank.new(rank, value) }
+
+      all_ranks.flat_map {|rank| %w(hearts clubs spades diamonds).flat_map {|suit| Card.new(rank,suit) } }
     end
 
   end
