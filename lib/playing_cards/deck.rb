@@ -1,6 +1,7 @@
 require 'playing_cards/card'
 
 module PlayingCards
+  # Describes a normal set of cards
   class Deck
     SUITS = %w(hearts clubs spades diamonds)
     RANKS = %w(ace two three four five six seven

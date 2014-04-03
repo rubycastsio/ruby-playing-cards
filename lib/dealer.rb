@@ -1,5 +1,6 @@
 require 'playing_cards'
 
+# responsible for manipulating cards
 module PlayingCards::Dealer
   extend self
 

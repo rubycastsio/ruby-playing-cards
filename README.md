@@ -1,6 +1,7 @@
 # PlayingCards
 
 [![Code Climate](https://codeclimate.com/github/thatrubylove/playing_cards.png)](https://codeclimate.com/github/thatrubylove/playing_cards)
+[![Build Status](https://travis-ci.org/thatrubylove/playing_cards.svg?branch=master)](https://travis-ci.org/thatrubylove/playing_cards)
 
 This library gives you access to a functional deck of cards, and a deck of blackjack cards.
 

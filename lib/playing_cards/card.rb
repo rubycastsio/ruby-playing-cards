@@ -3,6 +3,7 @@ require 'values'
 require 'playing_cards/rank'
 
 module PlayingCards
+  # Immutable card object
   class Card < Value.new(:rank, :suit)
     def suit
       (@suit || 'naked').to_sym

@@ -1,26 +1,24 @@
 require 'minitest_helper'
 require 'blackjack_cards/deck'
 
-include BlackjackCards
-
-describe Deck do
+describe "BlackjackCards::Deck" do
   describe '#initialize' do
     describe 'initialized without a shoe-size' do
-      subject { Deck.new }
+      subject { BlackjackCards::Deck.new }
       it 'must be composed of 52 cards' do
         subject.cards.count.must_equal 52
       end
     end
 
     describe 'initialized with a shoe-size of 2' do
-      subject { Deck.new(2) }
+      subject { BlackjackCards::Deck.new(2) }
       it 'must be composed of 104 cards' do
         subject.cards.count.must_equal 104
       end
     end
 
     describe 'initialized with a shoe-size of 10' do
-      subject { Deck.new(10) }
+      subject { BlackjackCards::Deck.new(10) }
       it 'must be composed of 520 cards' do
         subject.cards.count.must_equal 520
       end
@@ -28,7 +26,8 @@ describe Deck do
   end
 
   describe 'a generated deck' do
-    subject { Deck.new }
+    subject { BlackjackCards::Deck.new }
+
     it 'must have 13 cards of hearts' do
       only_hearts = ->(card) { card.suit == :hearts }
       subject.cards.select(&only_hearts).count.must_equal 13
