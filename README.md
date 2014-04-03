@@ -29,10 +29,17 @@ require 'playing_cards'
 # normal 52 card deck
 deck = PlayingCards::Deck.new
 deck.cards.count #=> 52
+# card rank values are A=0 to K=12
 
 # many decks for games that require multiple packs of cards
 deck = PlayingCards::Deck.new(12)
 deck.cards.count #=> 624
+
+# blackjack deck with 4 shoes
+deck = BlackjackCards::Deck.new(12)
+deck.cards.count #=> 208
+# aces now have 11 for a rank value
+# face cards are 10
 ```
 
 ## Contributing
